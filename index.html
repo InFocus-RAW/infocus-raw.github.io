@@ -9,7 +9,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="styles.css">
 <style>
-body,h1 {font-family: "Radley", serif}
+body,h1 {
+  font-family: "Radley", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
 h1 {letter-spacing: 6px}
 .w3-row-padding img {margin-bottom: 12px}
 </style>
@@ -19,46 +26,35 @@ h1 {letter-spacing: 6px}
 <!-- !PAGE CONTENT! -->
 <div class="w3-content" style="max-width:1500px">
 
-<!-- Header -->
-<header class="w3-panel w3-center w3-opacity" style="padding:128px 16px">
-  <h1 class="w3-xlarge">PHOTOGRAPHER</h1>
-  <h1>Ricardo Rodrigues</h1>
-  
-  <div class="w3-padding-32">
-    <div class="w3-bar w3-border">
-      <a href="#" class="w3-bar-item w3-button">Home</a>
-      <a href="#" class="w3-bar-item w3-button w3-light-grey">B&W</a>
-      <a href="#" class="w3-bar-item w3-button">Colored</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+  <!-- Header -->
+  <header class="w3-panel w3-center w3-opacity" style="padding:128px 16px">
+    <h1 class="w3-xlarge">PHOTOGRAPHER</h1>
+    <h1>Ricardo Rodrigues</h1>
+    
+    <div class="w3-padding-32">
+      <div class="w3-bar w3-border">
+        <a href="#" class="w3-bar-item w3-button">Home</a>
+        <a href="#" class="w3-bar-item w3-button w3-light-grey">B&W</a>
+        <a href="#" class="w3-bar-item w3-button">Colored</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+      </div>
     </div>
+  </header>
+
+  <!-- Photo Grid -->
+  <div class="w3-row-padding w3-grayscale" style="margin-bottom:128px">
+    
+      <img src="./photos/DSC00518.jpg" style="width:30%" onclick="onClick(this)" alt="f/5.6 1/200sec ISO-5000">
+      <img src="./photos/DSC01495.jpg" style="width:30%" onclick="onClick(this)" alt="f/5.6 1/200sec ISO-2000">
+      <img src="./photos/DSC01698.jpg" style="width:30%" onclick="onClick(this)" alt="f/1.8 1/30sec ISO-400">
+      <img src="./photos/DSC02070.jpg" style="width:30%" onclick="onClick(this)" alt="f/5 1/200sec ISO-10000">
+      <img src="./photos/DSC01483.jpg" style="width:30%" onclick="onClick(this)" alt="f/5 1/200sec ISO-10000">
+      <img src="./photos/DSC00944.jpg" style="width:30%" onclick="onClick(this)" alt="f/5 1/200sec ISO-10000">
+      <img src="./photos/DSC00877.jpg" style="width:30%" onclick="onClick(this)" alt="f/5 1/200sec ISO-10000">
+      <img src="./photos/DSC01872.jpg" style="width:30%" onclick="onClick(this)" alt="f/5 1/200sec ISO-10000">
+      <img src="./photos/DSC01925.jpg" style="width:30%" onclick="onClick(this)" alt="f/5 1/200sec ISO-10000">
+
   </div>
-</header>
-
-<!-- Photo Grid -->
-<div class="w3-row-padding w3-grayscale" style="margin-bottom:128px">
-  
-    <img src="./photos/DSC00518.jpg" style="width:30%" onclick="onClick(this)" alt="f/5.6 1/200sec ISO-5000">
-    <img src="./photos/DSC01495.jpg" style="width:30%" onclick="onClick(this)" alt="f/5.6 1/200sec ISO-2000">
-    <img src="./photos/DSC01698.jpg" style="width:30%" onclick="onClick(this)" alt="f/1.8 1/30sec ISO-400">
-    <img src="./photos/DSC02070.jpg" style="width:30%" onclick="onClick(this)" alt="f/5 1/200sec ISO-10000">
-    <img src="./photos/DSC01483.jpg" style="width:30%" onclick="onClick(this)" alt="f/5 1/200sec ISO-10000">
-    <img src="./photos/DSC00944.jpg" style="width:30%" onclick="onClick(this)" alt="f/5 1/200sec ISO-10000">
-    <img src="./photos/DSC00877.jpg" style="width:30%" onclick="onClick(this)" alt="f/5 1/200sec ISO-10000">
-    <img src="./photos/DSC01872.jpg" style="width:30%" onclick="onClick(this)" alt="f/5 1/200sec ISO-10000">
-    <img src="./photos/DSC01925.jpg" style="width:30%" onclick="onClick(this)" alt="f/5 1/200sec ISO-10000">
-
-
-<!--
-  <div class="w3-half">
-    <img src="/w3images/underwater.jpg" style="width:100%">
-    <img src="/w3images/ocean.jpg" style="width:100%">
-    <img src="/w3images/wedding.jpg" style="width:100%">
-    <img src="/w3images/mountainskies.jpg" style="width:100%">
-    <img src="/w3images/rocks.jpg" style="width:100%">
-    <img src="/w3images/underwater.jpg" style="width:100%">
-  </div>
--->
-</div>
 
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0;font-family: Rethink Sans, sans-serif" onclick="this.style.display='none'">
@@ -74,15 +70,10 @@ h1 {letter-spacing: 6px}
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large"> 
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">me</a></p>
+  <p>Follow me</p>
+  <a href="https://www.instagram.com/infocus.raw/"><i class="fa fa-instagram w3-hover-opacity"> </i></a> 
+  <!-- <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">me</a> -->
 </footer>
-
 
 <script>
     // Modal Image Gallery

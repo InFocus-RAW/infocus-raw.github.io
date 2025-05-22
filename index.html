@@ -62,8 +62,8 @@ h1 {letter-spacing: 6px}
 
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0;font-family: Rethink Sans, sans-serif" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-    <div class="w3-modal-content animate-zoom w3-center w3-transparent w3-padding-64 zoomed" style="width: 50%">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span> <!-- X botao -->
+    <div class="animate-zoom center-wrapper zoomed modal-content padding-64">
       <img id="img01" class="w3-image">
       <p id="caption"></p>
     </div>
@@ -91,6 +91,16 @@ h1 {letter-spacing: 6px}
       document.getElementById("modal01").style.display = "block";
       var captionText = document.getElementById("caption");
       captionText.innerHTML = element.alt;
+
+      const img = document.getElementById('img01');
+
+      img.onload = function () {
+      if (img.naturalHeight > img.naturalWidth) {
+        img.classList.add('portrait');
+      } else {
+        img.classList.add('landscape');
+      }
+      };
     }
 </script>
 

@@ -1,24 +1,43 @@
 .zoomed {
-    position: fixed;
-    top: 0;
-    left: 0;
+    /*position: fixed;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.8); /* optional dark background */
+    background: rgba(0, 0, 0, 0.8); /* optional dark background 
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 1000;*/
+    
 }
 
 .center-wrapper {
-display: flex;
+/*display: flex;
 justify-content: center;
 align-items: center;
 height: 100vh; 
+box-sizing: content-box;
+*/
+    
+    height: auto;
+    width: 90%;
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    text-align:center;
 }
 
+.modal-content{
+    margin:auto;
+    position:relative;
+    padding:0;
+    outline:0;
+    /*width:1600px  /*MUDAR ISTO*/
+}
 
+.padding-64{
+    padding-top:64px!important;
+    padding-bottom:64px!important
+}
 
 .animate-zoom {
     animation:animatezoom 0.6s
@@ -30,3 +49,13 @@ height: 100vh;
         transform:scale(1)
     }
 }
+
+.portrait {
+    width: auto;
+    height: 80vh;
+  }
+
+  .landscape {
+    width: 80vw;
+    height: auto;
+  }

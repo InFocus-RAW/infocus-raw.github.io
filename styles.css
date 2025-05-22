@@ -17,10 +17,6 @@ align-items: center;
 height: 100vh; 
 box-sizing: content-box;
 */
-    
-    /*height: auto;
-    width: 90%;
-    display: flex;*/
     justify-content: center;
     align-items: center;
     text-align:center;
@@ -51,13 +47,26 @@ box-sizing: content-box;
 }
 
 .portrait {
-    height: 80vh;
+    height: 90vh;
     width: auto;
     /*object-fit: contain;*/
   }
 
   .landscape {
     width: auto;
-    height: 80vh;
+    height: 90vh;
     /*object-fit: contain;*/
   }
+
+@media (orientation: portrait){
+    #img01 {
+        width: 90vw;
+        height: auto;
+    }
+}
+@media (orientation: landscape){
+    #img01 {
+        width: auto;
+        height: 90vh;
+    }
+}

@@ -97,8 +97,10 @@ h1 {letter-spacing: 6px}
       img.onload = function () {
       if (img.naturalHeight > img.naturalWidth) {
         img.classList.add('portrait');
+        img.classList.remove('landscape');
       } else {
         img.classList.add('landscape');
+        img.classList.remove('portrait');
       }
       };
     }
